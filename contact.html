@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9; /* Light background color */
+        }
+
+        /* Header styling */
+        .header {
+            display: flex; 
+            align-items: center;
+            justify-content: flex-start; /* Align items to the start (left) */
+            padding: 10px 20px;
+            background-color: #90EE90; /* Light green background */
+            width: 100%;
+        }
+
+        /* Logo styling */
+        .logo img {
+            max-width: 250px; /* Logo size */
+            height: auto;
+            margin-right: 20px;
+        }
+
+        /* Navigation menu styling */
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            align-items: center; /* Align navigation items vertically centered */
+        }
+
+        .nav-menu li {
+            margin-left: 20px; /* Increased margin for better spacing */
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            padding: 8px 12px;
+            transition: color 0.3s; /* Added transition for hover effect */
+        }
+
+        .nav-menu a:hover {
+            color: #2e7d32; /* Darker green on hover */
+        }
+
+        /* Contact and map layout container */
+        .contact-map-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        /* Contact details container */
+        .contact-details {
+            width: 48%; /* Take 48% of the width */
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #4CAF50; /* Heading color */
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+            line-height: 1.6;
+            color: #555; /* Darker text color for readability */
+        }
+
+        /* Map container styling */
+        .map-container {
+            width: 48%; /* Take 48% of the width */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .contact-map-container {
+                flex-direction: column; /* Stack vertically on smaller screens */
+            }
+
+            .contact-details, .map-container {
+                width: 100%; /* Full width for smaller screens */
+                margin-bottom: 20px; /* Space between stacked elements */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header section -->
+    <header class="header">
+        <!-- Logo section -->
+        <div class="logo">
+            <img src="logo.png" alt="Company Logo"> <!-- Replace with your logo file path -->
+        </div>
+
+        <!-- Navigation menu -->
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="meet-the-team.html">Meet the Team</a></li>
+                <li><a href="services.html">Services</a></li> <!-- Restored Services button -->
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact details and map content -->
+    <div class="contact-map-container">
+        <!-- Contact details content -->
+        <div class="contact-details">
+            <h2>Contact Us</h2>
+            <p>Phone: <a href="tel:+918075562549">+91 80755 62549</a></p> <!-- Added clickable phone link -->
+            <p>Email: <a href="mailto:sensedesign.info@gmail.com">sensedesign.info@gmail.com</a></p>
+            <p>Registered Address:</p>
+            <p>
+                Sense Design (OPC) Private Limited,<br>
+                Udayagiri, 445/3,<br>
+                Kadampazhippuram,<br>
+                Pulappatta,<br>
+                Palakkad,<br>
+                Kerala-678632.
+            </p>
+        </div>
+
+        <!-- Google Map embed -->
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d823.6262750882777!2d76.46529116622698!3d10.899085301916141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8793dd55ea5ef%3A0x8a496294aac6e4a0!2sSense%20Design%20(OPC)%20Private%20Limited!5e0!3m2!1sen!2sin!4v1728015201648!5m2!1sen!2sin" 
+                width="100%" 
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+
+</body>
+</html>

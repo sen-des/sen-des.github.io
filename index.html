@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9; /* Light background color */
+        }
+
+        /* Header styling */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 10px 20px;
+            background-color: #90EE90; /* Light green background */
+            width: 100%;
+        }
+
+        /* Logo styling */
+        .logo img {
+            max-width: 250px; /* Logo size */
+            height: auto;
+            margin-right: 20px;
+        }
+
+        /* Navigation menu styling */
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            margin-left: 20px; /* Increased margin for better spacing */
+            position: relative;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333; /* Darker color for better contrast */
+            font-size: 18px;
+            padding: 8px 12px;
+            display: block;
+            transition: color 0.3s; /* Smooth transition for hover effect */
+        }
+
+        .nav-menu a:hover {
+            color: #0056b3; /* Change color on hover */
+        }
+
+        /* Main content section */
+        .content {
+            margin: 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #0056b3; /* Heading color */
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+            line-height: 1.6;
+            color: #444; /* Darker text for readability */
+        }
+
+        /* Box container for "What We Offer" and "Why Choose Us?" sections */
+        .offer-choose-container {
+            display: flex;
+            justify-content: space-around; /* Distribute space evenly */
+            margin: 20px;
+            flex-wrap: wrap; /* Make it responsive */
+        }
+
+        .box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Box shadow for borders */
+            width: 40%; /* Reduced width */
+            transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effect */
+            text-align: justify; /* Justify text inside the box */
+            margin-bottom: 20px; /* Space between boxes */
+        }
+
+        .box:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+        }
+
+        /* Contact form styling */
+        .contact-form {
+            margin: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s; /* Smooth transition for border */
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+            border-color: #90EE90; /* Highlight border on focus */
+        }
+
+        input[type="submit"] {
+            background-color: #90EE90; /* Light green background */
+            color: black;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #d4edda; /* Slightly darker green on hover */
+        }
+
+        /* Image bar styling */
+        .scrolling-bar {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .scrolling-bar img {
+            width: 100px;
+            margin-right: 20px;
+        }
+
+        /* Clients section styling */
+        .clients-section {
+            background-color: #f0f8ff; /* Light blue background for clients section */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .offer-choose-container {
+                flex-direction: column; /* Stack boxes on smaller screens */
+                align-items: center; /* Center align boxes */
+            }
+
+            .box {
+                width: 90%; /* Full width for boxes on small screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header section -->
+    <header class="header">
+        <!-- Logo section -->
+        <div class="logo">
+            <img src="logo.png" alt="Sense Design Logo"> <!-- Replace with your logo file path -->
+        </div>
+
+        <!-- Navigation menu -->
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="meet-the-team.html">Meet the Team</a></li>
+                <li><a href="services.html">Services</a></li> <!-- Removed dropdown -->
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content section -->
+    <div class="content">
+        <p>
+            <strong>Welcome to Sense Design (OPC) Private Limited!</strong> <!-- Made bold -->
+        </p>
+        <p>
+            At Sense Design, we are dedicated to providing top-notch engineering solutions tailored to meet the unique needs of our clients. With a strong foundation in Computer-Aided Design (CAD) and Finite Element Analysis (FEA), we leverage advanced technologies and innovative methodologies to deliver high-quality design services for various industries.
+        </p>
+        <p>
+            <strong>Our Mission</strong><br>
+            Our mission is to be a trusted partner for businesses seeking to enhance their design capabilities and optimize their engineering processes. We strive to ensure that our solutions not only meet but exceed client expectations.
+        </p>
+
+        <!-- Boxes for "What We Offer" and "Why Choose Us?" -->
+        <div class="offer-choose-container">
+            <div class="box">
+                <h2>What We Offer</h2>
+                <ul>
+                    <li><strong>Custom Solutions:</strong> Tailored design services for bulk material handling equipment, including conveyors, hoppers, and silos.</li> <!-- Made bold -->
+                    <li><strong>Design Validation:</strong> Comprehensive testing and analysis to validate design efficiency and performance.</li> <!-- Made bold -->
+                    <li><strong>Engineering Consultation:</strong> Expert guidance to navigate complex engineering challenges and ensure successful project execution.</li> <!-- Made bold -->
+                </ul>
+            </div>
+            <div class="box">
+                <h2>Why Choose Us?</h2>
+                <ul>
+                    <li><strong>Expert Team:</strong> Our team of experienced engineers and designers are committed to excellence and continuous improvement.</li>
+                    <li><strong>Innovative Solutions:</strong> We stay ahead of industry trends and technological advancements to provide cutting-edge solutions.</li>
+                    <li><strong>Client-Centric Approach:</strong> We prioritize our clients’ needs, fostering long-lasting relationships built on trust and transparency.</li>
+                </ul>
+            </div>
+        </div>
+
+        <p>
+            At Sense Design, we believe in the power of collaboration and innovation. Whether you are looking for engineering consultation, design validation, or custom solutions, we are here to help you succeed.
+        </p>
+        <p>
+            <strong>Join us on this journey toward engineering excellence!</strong> <!-- Made bold -->
+        </p>
+    </div>
+
+    <!-- Contact form section -->
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!-- Clients Heading -->
+    <h2 style="text-align: center; margin: 20px 0;">Clients</h2> <!-- Centered heading for Clients -->
+
+    <!-- Image bar section without scrolling -->
+    <div class="scrolling-bar">
+        <img src="logo1.png" alt="Client Logo 1">
+        <img src="logo2.png" alt="Client Logo 2">
+        <img src="logo3.png" alt="Client Logo 3">
+        <img src="logo4.png" alt="Client Logo 4">
+        <img src="logo5.png" alt="Client Logo 5">
+        <img src="logo6.png" alt="Client Logo 6">
+        <img src="logo7.png" alt="Client Logo 7">
+    </div>
+
+</body>
+
+</html>

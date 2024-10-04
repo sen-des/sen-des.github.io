@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Soft background color */
+        }
+
+        /* Header styling */
+        .header {
+            display: flex; 
+            align-items: center;
+            justify-content: flex-start; /* Align items to the start (left) */
+            padding: 15px 30px;
+            background-color: #90EE90; /* Light green background */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Header shadow */
+            width: 100%;
+        }
+
+        /* Logo styling */
+        .logo img {
+            max-width: 250px; /* Logo size */
+            height: auto;
+            margin-right: 30px;
+        }
+
+        /* Navigation menu styling */
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            align-items: center; /* Align navigation items vertically centered */
+        }
+
+        .nav-menu li {
+            margin-left: 20px; /* Increased margin for better spacing */
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #2d2d2d; /* Darker color for better contrast */
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+        }
+
+        .nav-menu a:hover {
+            background-color: #2d7d32; /* Darker green on hover */
+            color: white; /* White text on hover */
+        }
+
+        /* Services container */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
+            gap: 20px; /* Space between boxes */
+            padding: 30px; /* Increased padding for spacious feel */
+            margin: 20px;
+        }
+
+        /* Service box styling */
+        .service-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+            transition: transform 0.3s; /* Smooth transition for hover effect */
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+        }
+
+        .service-box h3 {
+            color: #4CAF50; /* Heading color */
+            margin-bottom: 15px;
+            font-size: 24px; /* Increased heading size */
+        }
+
+        .service-box p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555; /* Darker text color for readability */
+            text-align: justify; /* Justify text */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .services-container {
+                grid-template-columns: 1fr; /* Single column on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header section -->
+    <header class="header">
+        <!-- Logo section -->
+        <div class="logo">
+            <img src="logo.png" alt="Company Logo"> <!-- Replace with your logo file path -->
+        </div>
+
+        <!-- Navigation menu -->
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="meet-the-team.html">Meet the Team</a></li>
+                <li><a href="services.html">Services</a></li> 
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Services section -->
+    <div class="services-container">
+        <!-- Computer Aided Design -->
+        <div class="service-box">
+            <h3>Computer Aided Design</h3>
+            <p>We offer comprehensive Computer Aided Design (CAD) services tailored to meet the specific needs of industries involved in bulk material handling equipment, construction machinery, and general engineering components. Our CAD solutions encompass 3D modeling, drafting, and detailing, ensuring precise and efficient designs that streamline production processes. With a focus on design accuracy and optimization, we deliver high-quality engineering drawings that support product development from concept through to final execution, enhancing both functionality and manufacturability. Sense Design's CAD expertise is designed to help clients bring innovative and reliable products to market faster.</p>
+        </div>
+
+        <!-- Finite Element Analysis -->
+        <div class="service-box">
+            <h3>Finite Element Analysis</h3>
+            <p>We offer comprehensive Finite Element Analysis (FEA) services designed to enhance product performance and reliability in various engineering applications. Our FEA solutions utilize advanced simulation techniques to analyze the structural, thermal, and fluid dynamics behavior of components under real-world conditions. By accurately predicting how materials and designs will respond to different loads and environments, we help clients identify potential weaknesses, optimize designs, and reduce the risk of failure. Our experienced team combines expertise in engineering principles with state-of-the-art software tools, ensuring precise results that support informed decision-making throughout the product development lifecycle. With Sense Design's FEA services, clients can achieve greater efficiency, safety, and cost-effectiveness in their projects.</p>
+        </div>
+
+        <!-- Design Optimization -->
+        <div class="service-box">
+            <h3>Design Optimization</h3>
+            <p>We offer comprehensive Design Optimization services aimed at enhancing the performance, efficiency, and manufacturability of engineering components. Utilizing advanced techniques such as simulation, parametric analysis, and iterative design processes, we identify and refine key design variables to minimize material usage while maximizing functionality and strength. Our team collaborates closely with clients to understand their specific needs and industry standards, ensuring that the optimized designs not only meet stringent performance criteria but also align with cost and production constraints. By integrating innovative solutions and a focus on sustainability, Sense Design helps clients achieve superior product designs that lead to reduced production costs and improved market competitiveness.</p>
+        </div>
+
+        <!-- Design Validation -->
+        <div class="service-box">
+            <h3>Design Validation</h3>
+            <p>We offer expert Design Validation services to ensure that engineering components and systems meet predefined specifications and performance requirements. Our comprehensive validation process includes rigorous testing, analysis, and verification techniques that help identify potential issues early in the design phase, thereby minimizing costly redesigns and production delays. By employing advanced methodologies such as finite element analysis (FEA) and simulation, we validate the functionality, safety, and reliability of designs across various industries, including bulk material handling and construction. Our collaborative approach ensures that we align closely with our clients’ objectives, resulting in validated designs that enhance product quality, compliance, and market readiness while fostering innovation and efficiency.</p>
+        </div>
+    </div>
+
+</body>
+</html>
