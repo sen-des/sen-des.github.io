@@ -3,39 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services Dropdown Menu</title>
-    <meta name="description" content="Sense Design - Engineering Services including CAD, FEA, Design Optimization, and Validation for construction and bulk material handling equipment.">
-    <meta name="keywords" content="CAD, FEA, Design Optimization, Construction Equipment, Bulk Material Handling">
+    <title>Meet the Team | Sense Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body, .nav-menu a {
-            font-family: Arial, sans-serif;
-            color: black;
-        }
-
         body {
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
+            color: #333;
         }
 
-        /* Header styling */
         .header {
-            display: flex; 
+            display: flex;
             align-items: center;
-            justify-content: flex-start;
-            padding: 10px 20px;
-            background-color: #90EE90; /* Light green background */
-            width: 100%;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background-color: #4CAF50;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
-        /* Logo styling */
         .logo img {
-            max-width: 250px; /* Logo size */
+            max-width: 200px;
             height: auto;
-            margin-right: 20px;
         }
 
-        /* Navigation menu styling */
         .nav-menu {
             list-style: none;
             display: flex;
@@ -44,116 +37,92 @@
         }
 
         .nav-menu li {
-            margin-left: 10px;
-            position: relative;
+            margin-left: 30px;
         }
 
         .nav-menu a {
             text-decoration: none;
+            color: white;
             font-size: 18px;
-            padding: 8px 12px;
-            display: block;
+            padding: 8px 15px;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
-        @media (max-width: 768px) {
-            .nav-menu {
-                flex-direction: column;
-            }
-
-            .nav-menu li {
-                margin: 5px 0;
-            }
-
-            .logo img {
-                max-width: 150px;
-            }
+        .nav-menu a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
         }
 
-        /* Team Members Section Styling */
         .team-container {
-            display: flex; /* Enable flexbox */
-            justify-content: center; /* Center the items */
-            padding: 20px; /* Add padding around team members */
-            flex-wrap: nowrap; /* Prevent wrapping to keep them side by side */
-            max-width: 1200px; /* Set a max-width for the container */
-            margin: 0 auto; /* Center the container in the viewport */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 40px;
         }
 
         .team-member {
-            background-color: #fff; /* Background for team member sections */
-            border: 1px solid #ddd; /* Light border */
-            border-radius: 5px; /* Rounded corners */
-            padding: 15px; /* Inner padding */
-            width: 48%; /* Set width to accommodate two boxes side by side */
-            margin: 10px; /* Margin between members */
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            text-align: center; /* Center text */
-            overflow: hidden; /* Prevent overflow of text */
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         }
 
         .team-member img {
-            width: 120px; /* Increased width for images */
-            height: 120px; /* Increased height for images */
-            border-radius: 50%; /* Circular images */
-            margin: 0 auto 15px auto; /* Center the image with auto margins */
-            display: block; /* Ensure the image is treated as a block element */
+            max-width: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
         }
 
         .team-member h3 {
-            font-size: 20px; /* Set font size */
-            line-height: 1.2; /* Slightly adjusted line height */
+            color: #4CAF50;
+            margin-bottom: 5px;
         }
 
-        .team-member h4 {
-            font-size: 18px; /* Set font size */
-            margin: 10px 0; /* Added margin for spacing */
-        }
-
-        .team-member p {
-            font-size: 16px; /* Set font size for paragraph */
-            line-height: 1.4; /* Increased line height for better readability */
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .team-container {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header section -->
-    <header class="header" role="navigation">
-        <!-- Logo section -->
+    <header class="header">
         <div class="logo">
-            <img src="logo.png" alt="Company Logo"> <!-- Replace with your logo file path -->
+            <img src="logo.png" alt="Company Logo">
         </div>
-
-        <!-- Navigation menu -->
         <nav>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="meet-the-team.html">Meet the Team</a></li>
-                <li><a href="services.html">Services</a></li> <!-- Restored Services button -->
+                <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Team Members Section -->
     <div class="team-container">
-        <section class="team-member">
-            <img src="your-photo1.jpg" alt="Biswajit Haridasan, Director at Sense Design"> <!-- Replace with your actual photo -->
-            <h3>Mr. Biswajit Haridasan, M.Tech (Amrita Vishwa Vidyapeetham University), B.Tech (CUSAT)</h3>
-            <h4>Director, Sense Design</h4>
-            <p>
-                Biswajit is a Director at Sense Design (OPC) Pvt. Ltd. with extensive experience in CAD & FEA of Construction & Bulk Material Handling Equipment. With a passion for engineering, he has been instrumental in leading projects using CAD & FEA tools that enhance product performance and efficiency. He holds a B.Tech in Mechanical Engineering from CUSAT and an M.Tech in Automotive Engineering from Amrita Vishwa Vidyapeetham University. 
-            </p>
-        </section>
-
-        <section class="team-member">
-            <img src="your-photo2.jpg" alt="Mr. Sambandham Ganesan, Advisor at Sense Design"> <!-- Replace with your actual photo -->
-            <h3>Mr. Sambandham Ganesan, MBA (Netherlands), M.Tech (IIT Madras), B.Tech (IIT Madras)</h3>
-            <h4>Advisor, Sense Design</h4>
-            <p>
-                Ganesan is an advisor at Sense Design (OPC) Pvt. Ltd. with 42 years of experience in multi-disciplinary engineering and the mining industry. He holds both a B.Tech and an M.Tech in Mechanical Engineering from IIT Madras and has worked extensively in Port Material Handling Machines, Mining Machinery, and Construction Equipment. He also has experience managing technology transfers and R&D from overseas manufacturers in Russia, Germany, Italy, and the UK.
-            </p>
-        </section>
+        <div class="team-member">
+            <img src="biswajit.jpg" alt="Biswajit">
+            <h3>Biswajit</h3>
+            <p>Director</p>
+            <p>B.E. Mechanical Engineering, M.Tech in Automotive Engineering.</p>
+        </div>
+        <div class="team-member">
+            <img src="ganesan.jpg" alt="Mr. S. Ganesan">
+            <h3>Mr. S. Ganesan</h3>
+            <p>Advisor</p>
+            <p>B.Tech & M.Tech from IIT Madras, 42 years of industry experience.</p>
+        </div>
+        <!-- Add more team members as needed -->
     </div>
 
 </body>

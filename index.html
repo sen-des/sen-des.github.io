@@ -1,193 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home | Sense Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Basic body styling */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
+            color: #333;
         }
 
-        /* Header styling */
         .header {
             display: flex;
             align-items: center;
-            justify-content: space-between; /* Adjusted for better spacing */
-            padding: 10px 20px;
-            background-color: #90EE90;
-            flex-wrap: wrap; /* Allow logo and nav to stack if necessary */
+            justify-content: space-between;
+            padding: 20px 40px;
+            background-color: #4CAF50;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         .logo img {
-            max-width: 200px; /* Smaller logo size for better scaling */
+            max-width: 200px;
             height: auto;
         }
 
-        /* Navigation menu styling */
         .nav-menu {
             list-style: none;
             display: flex;
             margin: 0;
             padding: 0;
-            flex-wrap: wrap; /* Wrap navigation links for smaller screens */
         }
 
         .nav-menu li {
-            margin-left: 20px;
+            margin-left: 30px;
         }
 
         .nav-menu a {
             text-decoration: none;
-            color: #333;
+            color: white;
             font-size: 18px;
-            padding: 8px 12px;
-            display: block;
-            transition: color 0.3s;
+            padding: 8px 15px;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         .nav-menu a:hover {
-            color: #0056b3;
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
         }
 
-        /* Main content styling */
-        .content {
-            margin: 20px;
+        .hero {
+            background-color: #90EE90; /* Light green */
+            padding: 50px 20px;
+            text-align: center;
+            color: #333;
         }
 
-        h2 {
-            margin-bottom: 20px;
-            color: #0056b3;
+        .hero h1 {
+            margin: 0;
+            font-size: 36px;
         }
 
-        p {
-            font-size: 18px;
-            margin: 10px 0;
-            line-height: 1.6;
-            color: #444;
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px;
         }
 
-        /* Box container for "What We Offer" and "Why Choose Us?" */
-        .offer-choose-container {
-            display: flex;
-            justify-content: space-between; /* Spacing between boxes */
-            margin: 20px;
-            flex-wrap: wrap;
-        }
-
-        .box {
+        .service-item {
             background-color: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            width: 45%; /* Adjusted width for better spacing */
-            margin-bottom: 20px;
-            transition: transform 0.2s, box-shadow 0.2s;
-            text-align: justify;
-        }
-
-        .box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Scrolling bar section styling */
-        .scrolling-bar {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
-            margin: 20px 0;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .scrolling-bar img {
-            width: 80px; /* Reduced image size for better responsiveness */
-            margin-right: 20px;
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         }
 
-        /* Responsive design */
-        @media (max-width: 1024px) {
-            .logo img {
-                max-width: 180px; /* Adjust logo size on smaller screens */
-            }
-
-            .nav-menu {
-                justify-content: center; /* Center navigation on smaller screens */
-            }
+        .service-item h3 {
+            color: #4CAF50;
+            margin-bottom: 10px;
         }
 
+        .service-item p {
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Responsive adjustments */
         @media (max-width: 768px) {
-            /* Stack header elements vertically */
-            .header {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            /* Full width boxes on smaller screens */
-            .offer-choose-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .box {
-                width: 90%;
-            }
-
-            /* Adjust text size for smaller screens */
-            p, h2 {
-                font-size: 16px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .logo img {
-                max-width: 150px; /* Smaller logo size for mobile */
-            }
-
-            /* Adjust padding for mobile */
-            .content {
-                margin: 10px;
-            }
-
-            /* Stack navigation links vertically */
-            .nav-menu {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .nav-menu li {
-                margin: 10px 0;
-            }
-
-            /* Reduce padding in the boxes */
-            .box {
-                padding: 15px;
-            }
-
-            /* Adjust font sizes for readability on mobile */
-            p {
-                font-size: 14px;
-            }
-
-            h2 {
-                font-size: 18px;
+            .service-list {
+                padding: 20px;
             }
         }
     </style>
 </head>
-
 <body>
 
-    <!-- Header section -->
     <header class="header">
-        <!-- Logo section -->
         <div class="logo">
-            <img src="logo.png" alt="Sense Design Logo"> <!-- Replace with your logo file path -->
+            <img src="logo.png" alt="Company Logo">
         </div>
-
-        <!-- Navigation menu -->
         <nav>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
@@ -198,61 +120,29 @@
         </nav>
     </header>
 
-    <!-- Main content section -->
-    <div class="content">
-        <p>
-            <strong>Welcome to Sense Design (OPC) Private Limited!</strong>
-        </p>
-        <p>
-            At Sense Design, we are dedicated to providing top-notch engineering solutions tailored to meet the unique needs of our clients. With a strong foundation in Computer-Aided Design (CAD) and Finite Element Analysis (FEA), we leverage advanced technologies and innovative methodologies to deliver high-quality design services for various industries.
-        </p>
-        <p>
-            <strong>Our Mission</strong><br>
-            Our mission is to be a trusted partner for businesses seeking to enhance their design capabilities and optimize their engineering processes. We strive to ensure that our solutions not only meet but exceed client expectations.
-        </p>
+    <section class="hero">
+        <h1>Welcome to Sense Design</h1>
+        <p>Your partner in precision engineering solutions.</p>
+    </section>
 
-        <!-- Boxes for "What We Offer" and "Why Choose Us?" -->
-        <div class="offer-choose-container">
-            <div class="box">
-                <h2>What We Offer</h2>
-                <ul>
-                    <li><strong>Custom Solutions:</strong> Tailored design services for bulk material handling equipment, including conveyors, hoppers, and silos.</li>
-                    <li><strong>Design Validation:</strong> Comprehensive testing and analysis to validate design efficiency and performance.</li>
-                    <li><strong>Engineering Consultation:</strong> Expert guidance to navigate complex engineering challenges and ensure successful project execution.</li>
-                </ul>
-            </div>
-            <div class="box">
-                <h2>Why Choose Us?</h2>
-                <ul>
-                    <li><strong>Expert Team:</strong> Our team of experienced engineers and designers are committed to excellence and continuous improvement.</li>
-                    <li><strong>Innovative Solutions:</strong> We stay ahead of industry trends and technological advancements to provide cutting-edge solutions.</li>
-                    <li><strong>Client-Centric Approach:</strong> We prioritize our clients’ needs, fostering long-lasting relationships built on trust and transparency.</li>
-                </ul>
-            </div>
+    <section class="service-list">
+        <div class="service-item">
+            <h3>Computer Aided Design</h3>
+            <p>Expert CAD solutions for precision engineering.</p>
         </div>
-
-        <p>
-            At Sense Design, we believe in the power of collaboration and innovation. Whether you are looking for engineering consultation, design validation, or custom solutions, we are here to help you succeed.
-        </p>
-        <p>
-            <strong>Join us on this journey toward engineering excellence!</strong>
-        </p>
-    </div>
-
-    <!-- Clients Heading -->
-    <h2 style="text-align: center; margin: 20px 0;">Clients</h2> <!-- Centered heading for Clients -->
-
-    <!-- Image bar section without scrolling -->
-    <div class="scrolling-bar">
-        <img src="logo1.png" alt="Client Logo 1">
-        <img src="logo2.png" alt="Client Logo 2">
-        <img src="logo3.png" alt="Client Logo 3">
-        <img src="logo4.png" alt="Client Logo 4">
-        <img src="logo5.png" alt="Client Logo 5">
-        <img src="logo6.png" alt="Client Logo 6">
-        <img src="logo7.png" alt="Client Logo 7">
-    </div>
+        <div class="service-item">
+            <h3>Finite Element Analysis</h3>
+            <p>Robust analysis for design validation and optimization.</p>
+        </div>
+        <div class="service-item">
+            <h3>Design Validation</h3>
+            <p>Ensuring designs meet specified requirements.</p>
+        </div>
+        <div class="service-item">
+            <h3>Optimization Services</h3>
+            <p>Improving efficiency and reducing costs in designs.</p>
+        </div>
+    </section>
 
 </body>
-
 </html>
