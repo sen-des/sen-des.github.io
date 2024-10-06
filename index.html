@@ -6,28 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
+        /* Basic body styling */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9; /* Light background color */
+            background-color: #f9f9f9;
         }
 
         /* Header styling */
         .header {
             display: flex;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: space-between; /* Adjusted for better spacing */
             padding: 10px 20px;
-            background-color: #90EE90; /* Light green background */
-            width: 100%;
+            background-color: #90EE90;
+            flex-wrap: wrap; /* Allow logo and nav to stack if necessary */
         }
 
-        /* Logo styling */
         .logo img {
-            max-width: 250px; /* Logo size */
+            max-width: 200px; /* Smaller logo size for better scaling */
             height: auto;
-            margin-right: 20px;
         }
 
         /* Navigation menu styling */
@@ -36,141 +35,144 @@
             display: flex;
             margin: 0;
             padding: 0;
+            flex-wrap: wrap; /* Wrap navigation links for smaller screens */
         }
 
         .nav-menu li {
-            margin-left: 20px; /* Increased margin for better spacing */
-            position: relative;
+            margin-left: 20px;
         }
 
         .nav-menu a {
             text-decoration: none;
-            color: #333; /* Darker color for better contrast */
+            color: #333;
             font-size: 18px;
             padding: 8px 12px;
             display: block;
-            transition: color 0.3s; /* Smooth transition for hover effect */
+            transition: color 0.3s;
         }
 
         .nav-menu a:hover {
-            color: #0056b3; /* Change color on hover */
+            color: #0056b3;
         }
 
-        /* Main content section */
+        /* Main content styling */
         .content {
             margin: 20px;
         }
 
         h2 {
             margin-bottom: 20px;
-            color: #0056b3; /* Heading color */
+            color: #0056b3;
         }
 
         p {
             font-size: 18px;
             margin: 10px 0;
             line-height: 1.6;
-            color: #444; /* Darker text for readability */
+            color: #444;
         }
 
-        /* Box container for "What We Offer" and "Why Choose Us?" sections */
+        /* Box container for "What We Offer" and "Why Choose Us?" */
         .offer-choose-container {
             display: flex;
-            justify-content: space-around; /* Distribute space evenly */
+            justify-content: space-between; /* Spacing between boxes */
             margin: 20px;
-            flex-wrap: wrap; /* Make it responsive */
+            flex-wrap: wrap;
         }
 
         .box {
             background-color: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Box shadow for borders */
-            width: 40%; /* Reduced width */
-            transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effect */
-            text-align: justify; /* Justify text inside the box */
-            margin-bottom: 20px; /* Space between boxes */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 45%; /* Adjusted width for better spacing */
+            margin-bottom: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: justify;
         }
 
         .box:hover {
-            transform: translateY(-5px); /* Lift effect on hover */
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
 
-        /* Contact form styling */
-        .contact-form {
-            margin: 20px;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        label {
-            font-weight: bold;
-            margin-top: 10px;
-            display: block;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            transition: border-color 0.3s; /* Smooth transition for border */
-        }
-
-        input[type="text"]:focus,
-        input[type="email"]:focus {
-            border-color: #90EE90; /* Highlight border on focus */
-        }
-
-        input[type="submit"] {
-            background-color: #90EE90; /* Light green background */
-            color: black;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s; /* Smooth transition for hover effect */
-        }
-
-        input[type="submit"]:hover {
-            background-color: #d4edda; /* Slightly darker green on hover */
-        }
-
-        /* Image bar styling */
+        /* Scrolling bar section styling */
         .scrolling-bar {
             text-align: center;
             margin: 20px 0;
         }
 
         .scrolling-bar img {
-            width: 100px;
+            width: 80px; /* Reduced image size for better responsiveness */
             margin-right: 20px;
         }
 
-        /* Clients section styling */
-        .clients-section {
-            background-color: #f0f8ff; /* Light blue background for clients section */
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px;
+        /* Responsive design */
+        @media (max-width: 1024px) {
+            .logo img {
+                max-width: 180px; /* Adjust logo size on smaller screens */
+            }
+
+            .nav-menu {
+                justify-content: center; /* Center navigation on smaller screens */
+            }
         }
 
-        /* Responsive design */
         @media (max-width: 768px) {
+            /* Stack header elements vertically */
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /* Full width boxes on smaller screens */
             .offer-choose-container {
-                flex-direction: column; /* Stack boxes on smaller screens */
-                align-items: center; /* Center align boxes */
+                flex-direction: column;
+                align-items: center;
             }
 
             .box {
-                width: 90%; /* Full width for boxes on small screens */
+                width: 90%;
+            }
+
+            /* Adjust text size for smaller screens */
+            p, h2 {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo img {
+                max-width: 150px; /* Smaller logo size for mobile */
+            }
+
+            /* Adjust padding for mobile */
+            .content {
+                margin: 10px;
+            }
+
+            /* Stack navigation links vertically */
+            .nav-menu {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-menu li {
+                margin: 10px 0;
+            }
+
+            /* Reduce padding in the boxes */
+            .box {
+                padding: 15px;
+            }
+
+            /* Adjust font sizes for readability on mobile */
+            p {
+                font-size: 14px;
+            }
+
+            h2 {
+                font-size: 18px;
             }
         }
     </style>
@@ -190,7 +192,7 @@
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="meet-the-team.html">Meet the Team</a></li>
-                <li><a href="services.html">Services</a></li> <!-- Removed dropdown -->
+                <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
@@ -199,7 +201,7 @@
     <!-- Main content section -->
     <div class="content">
         <p>
-            <strong>Welcome to Sense Design (OPC) Private Limited!</strong> <!-- Made bold -->
+            <strong>Welcome to Sense Design (OPC) Private Limited!</strong>
         </p>
         <p>
             At Sense Design, we are dedicated to providing top-notch engineering solutions tailored to meet the unique needs of our clients. With a strong foundation in Computer-Aided Design (CAD) and Finite Element Analysis (FEA), we leverage advanced technologies and innovative methodologies to deliver high-quality design services for various industries.
@@ -214,9 +216,9 @@
             <div class="box">
                 <h2>What We Offer</h2>
                 <ul>
-                    <li><strong>Custom Solutions:</strong> Tailored design services for bulk material handling equipment, including conveyors, hoppers, and silos.</li> <!-- Made bold -->
-                    <li><strong>Design Validation:</strong> Comprehensive testing and analysis to validate design efficiency and performance.</li> <!-- Made bold -->
-                    <li><strong>Engineering Consultation:</strong> Expert guidance to navigate complex engineering challenges and ensure successful project execution.</li> <!-- Made bold -->
+                    <li><strong>Custom Solutions:</strong> Tailored design services for bulk material handling equipment, including conveyors, hoppers, and silos.</li>
+                    <li><strong>Design Validation:</strong> Comprehensive testing and analysis to validate design efficiency and performance.</li>
+                    <li><strong>Engineering Consultation:</strong> Expert guidance to navigate complex engineering challenges and ensure successful project execution.</li>
                 </ul>
             </div>
             <div class="box">
@@ -233,7 +235,7 @@
             At Sense Design, we believe in the power of collaboration and innovation. Whether you are looking for engineering consultation, design validation, or custom solutions, we are here to help you succeed.
         </p>
         <p>
-            <strong>Join us on this journey toward engineering excellence!</strong> <!-- Made bold -->
+            <strong>Join us on this journey toward engineering excellence!</strong>
         </p>
     </div>
 
