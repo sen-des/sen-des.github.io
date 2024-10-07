@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Contact Us | Sense Design</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -16,19 +16,28 @@
 
         /* Header styling */
         .header {
-            display: flex; 
+            display: flex;
             align-items: center;
-            justify-content: space-between; /* Changed to space-between for better layout */
+            justify-content: space-between; /* Space between company info and nav */
             padding: 20px 40px;
             background-color: #4CAF50; /* Dark green background */
             color: white;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
-        /* Logo styling */
-        .logo img {
-            max-width: 200px; /* Logo size */
-            height: auto;
+        .company-info {
+            text-align: left; /* Align text to the left */
+        }
+
+        .company-info h1 {
+            margin: 0;
+            font-size: 36px; /* Company name font size */
+        }
+
+        .company-info p {
+            margin: 0;
+            font-size: 18px; /* Tagline font size */
+            color: white; /* Tagline font color set to white */
         }
 
         /* Navigation menu styling */
@@ -48,11 +57,12 @@
             color: white;
             font-size: 18px;
             padding: 8px 12px;
-            transition: color 0.3s; /* Added transition for hover effect */
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         .nav-menu a:hover {
-            color: #2e7d32; /* Darker green on hover */
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
         }
 
         /* Contact and map layout container */
@@ -100,7 +110,7 @@
 
         /* Footer styling */
         footer {
-            background-color: #4CAF50;
+            background-color: #4CAF50; /* Same color as header */
             color: white;
             padding: 20px 40px;
             text-align: center;
@@ -133,17 +143,15 @@
 
     <!-- Header section -->
     <header class="header">
-        <!-- Logo section -->
-        <div class="logo">
-            <img src="logo.png" alt="Company Logo"> <!-- Replace with your logo file path -->
+        <div class="company-info">
+            <h1>Sense Design</h1>
+            <p>Your partner in precision engineering solutions</p>
         </div>
-
-        <!-- Navigation menu -->
         <nav>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="meet-the-team.html">Meet the Team</a></li>
-                <li><a href="services.html">Services</a></li> <!-- Restored Services button -->
+                <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>

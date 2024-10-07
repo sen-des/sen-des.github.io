@@ -19,14 +19,23 @@
             align-items: center;
             justify-content: space-between;
             padding: 20px 40px;
-            background-color: #4CAF50;
+            background-color: #4CAF50; /* Match footer color */
             color: white;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
-        .logo img {
-            max-width: 200px;
-            height: auto;
+        .company-info {
+            text-align: left; /* Align text to the left */
+        }
+
+        .company-info h1 {
+            margin: 0;
+            font-size: 36px; /* Larger font for company name */
+        }
+
+        .company-info p {
+            margin: 0;
+            font-size: 18px; /* Smaller font for tagline */
         }
 
         .nav-menu {
@@ -45,7 +54,6 @@
             color: white;
             font-size: 18px;
             padding: 8px 15px;
-            transition: background-color 0.3s, transform 0.3s;
         }
 
         .nav-menu a:hover {
@@ -53,40 +61,60 @@
             transform: translateY(-2px);
         }
 
-        .service-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+        .flow-diagram {
+            display: flex;
+            justify-content: space-between; /* Distribute boxes evenly */
+            align-items: flex-start; /* Align items to the top */
             padding: 40px;
+            max-width: 1200px;
+            margin: auto;
+            flex-wrap: wrap; /* Allow wrapping */
         }
 
-        .service-item {
-            background-color: white;
-            padding: 20px;
+        .service-box {
+            background-color: #ffffff;
             border-radius: 10px;
+            padding: 20px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 20px;
+            flex: 1; /* Allow boxes to grow equally */
+            height: 350px; /* Adjusted height for boxes */
+            max-width: 220px; /* Set max-width for consistent sizing */
+            overflow: hidden; /* Hide overflow for content */
         }
 
-        .service-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .service-item h3 {
+        .service-title {
+            font-size: 1.5em;
             color: #4CAF50;
             margin-bottom: 10px;
         }
 
-        .service-item p {
-            color: #555;
-            line-height: 1.5;
+        .service-description {
+            margin-bottom: 10px;
+            font-weight: 500; /* Bold description */
+        }
+
+        .specific-services {
+            text-align: left;
+            padding: 10px;
+            line-height: 1.4; /* Adjusted line height for better fit */
+        }
+
+        .specific-services ul {
+            list-style-type: disc; /* Use bullet points */
+            padding-left: 20px; /* Indentation for bullet points */
+            margin: 0; /* Remove margin */
+        }
+
+        .specific-services li {
+            margin-bottom: 8px; /* Space between items */
+            font-size: 1em; /* Font size for specific services */
         }
 
         /* Footer */
         footer {
-            background-color: #4CAF50;
+            background-color: #4CAF50; /* Match header color */
             color: white;
             padding: 20px 40px;
             text-align: center;
@@ -100,8 +128,9 @@
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
-            .service-list {
+            .flow-diagram {
                 padding: 20px;
+                flex-direction: column; /* Stack vertically */
             }
         }
     </style>
@@ -109,35 +138,64 @@
 <body>
 
     <header class="header">
-        <div class="logo">
-            <img src="logo.png" alt="Company Logo">
+        <div class="company-info">
+            <h1>Sense Design</h1>
+            <p>Your partner in precision engineering solutions</p>
         </div>
         <nav>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="meet-the-team.html">Meet the Team</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="services.html" id="services-button">Services</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="service-list">
-        <div class="service-item">
-            <h3>Computer Aided Design</h3>
-            <p>Expert CAD solutions for precision engineering.</p>
+    <section class="flow-diagram" id="services-section">
+        <div class="service-box">
+            <div class="service-title">Computer Aided Design</div>
+            <div class="service-description">Expert CAD solutions for precision engineering.</div>
+            <div class="specific-services">
+                <ul>
+                    <li>3D Modeling and Drafting</li>
+                    <li>Assembly Design</li>
+                    <li>Detail Drawings</li>
+                    <li>Product Design</li>
+                    <li>Custom Tooling Design</li>
+                    <li>Fixture Design</li>
+                    <li>Reverse Engineering</li>
+                </ul>
+            </div>
         </div>
-        <div class="service-item">
-            <h3>Finite Element Analysis</h3>
-            <p>Robust analysis for design validation and optimization.</p>
+        <div class="service-box">
+            <div class="service-title">Finite Element Analysis</div>
+            <div class="service-description">Robust analysis for design validation and optimization.</div>
+            <div class="specific-services">
+                <ul>
+                    <li>Stress Analysis</li>
+                    <li>Thermal Analysis</li>
+                    <li>Dynamic Analysis</li>
+                    <li>Fatigue Analysis</li>
+                    <li>Modal Analysis</li>
+                    <li>Nonlinear Analysis</li>
+                    <li>Failure Analysis</li>
+                </ul>
+            </div>
         </div>
-        <div class="service-item">
-            <h3>Design Validation</h3>
-            <p>Ensuring designs meet specified requirements.</p>
-        </div>
-        <div class="service-item">
-            <h3>Optimization Services</h3>
-            <p>Improving efficiency and reducing costs in designs.</p>
+        <div class="service-box">
+            <div class="service-title">Design Optimization</div>
+            <div class="service-description">Enhancing product performance and reducing costs.</div>
+            <div class="specific-services">
+                <ul>
+                    <li>Topology Optimization</li>
+                    <li>Weight Reduction Techniques</li>
+                    <li>Material Selection</li>
+                    <li>Design for Manufacturability</li>
+                    <li>Cost Reduction Strategies</li>
+                    <li>Process Optimization</li>
+                </ul>
+            </div>
         </div>
     </section>
 

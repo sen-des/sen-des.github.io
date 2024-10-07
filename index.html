@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sense Design offers precision engineering solutions including CAD, FEA, and design optimization.">
     <title>Home | Sense Design</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -22,11 +23,22 @@
             background-color: #4CAF50;
             color: white;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative; /* Make header relative to position it over the video */
+            z-index: 10; /* Ensure header is above the video */
         }
 
-        .logo img {
-            max-width: 200px;
-            height: auto;
+        .company-info {
+            text-align: left;
+        }
+
+        .company-info h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .company-info p {
+            margin: 0;
+            font-size: 18px;
         }
 
         .nav-menu {
@@ -53,84 +65,24 @@
             transform: translateY(-2px);
         }
 
-        .hero {
-            background-color: #90EE90; /* Light green */
-            padding: 50px 20px;
-            text-align: center;
-            color: #333;
+        /* Background video section with reduced height */
+        .background-section {
+            position: relative;
+            height: 60vh; /* Adjusted height to fit more content on screen */
+            overflow: hidden;
         }
 
-        .hero h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-
-        .service-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 40px;
-        }
-
-        .service-item {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .service-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .service-item h3 {
-            color: #4CAF50;
-            margin-bottom: 10px;
-        }
-
-        .service-item p {
-            color: #555;
-            line-height: 1.5;
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            background-color: #e9f5e9;
-            padding: 40px;
-            text-align: center;
-        }
-
-        .testimonial {
-            font-style: italic;
-            margin: 20px 0;
-        }
-
-        .testimonial cite {
-            display: block;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        /* Call to Action */
-        .cta {
-            text-align: center;
-            padding: 40px;
-        }
-
-        .cta a {
-            text-decoration: none;
-            color: white;
-            background-color: #4CAF50;
-            padding: 15px 30px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .cta a:hover {
-            background-color: #45a049;
+        .background-section video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
         }
 
         /* Footer */
@@ -139,6 +91,8 @@
             color: white;
             padding: 20px 40px;
             text-align: center;
+            position: relative;
+            z-index: 10;
         }
 
         footer a {
@@ -149,8 +103,19 @@
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
-            .service-list {
-                padding: 20px;
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            .nav-menu li {
+                margin-left: 0;
+                margin-bottom: 10px;
             }
         }
     </style>
@@ -158,8 +123,9 @@
 <body>
 
     <header class="header">
-        <div class="logo">
-            <img src="logo.png" alt="Company Logo">
+        <div class="company-info">
+            <h1>Sense Design</h1>
+            <p>Your partner in precision engineering solutions</p>
         </div>
         <nav>
             <ul class="nav-menu">
@@ -171,52 +137,19 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>Welcome to Sense Design</h1>
-        <p>Your partner in precision engineering solutions.</p>
+    <!-- Background Video Section with Reduced Height -->
+    <section class="background-section">
+        <video autoplay muted loop>
+            <source src="your-video-url.mp4" type="video/mp4"> <!-- Replace with your video URL -->
+            Your browser does not support the video tag.
+        </video>
     </section>
 
-    <section class="service-list">
-        <div class="service-item">
-            <h3>Computer Aided Design</h3>
-            <p>Expert CAD solutions for precision engineering.</p>
-        </div>
-        <div class="service-item">
-            <h3>Finite Element Analysis</h3>
-            <p>Robust analysis for design validation and optimization.</p>
-        </div>
-        <div class="service-item">
-            <h3>Design Validation</h3>
-            <p>Ensuring designs meet specified requirements.</p>
-        </div>
-        <div class="service-item">
-            <h3>Optimization Services</h3>
-            <p>Improving efficiency and reducing costs in designs.</p>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <h2>What Our Clients Say</h2>
-        <div class="testimonial">
-            <p>"Sense Design provided exceptional service and delivered exactly what we needed!"</p>
-            <cite>- Happy Client</cite>
-        </div>
-        <div class="testimonial">
-            <p>"The team's expertise in CAD and FEA made a significant impact on our project!"</p>
-            <cite>- Satisfied Customer</cite>
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="cta">
-        <h2>Ready to Start Your Project?</h2>
-        <a href="contact.html">Contact Us Today</a>
-    </section>
-<!-- Footer -->
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Sense Design | <a href="privacy.html">Privacy Policy</a> | <a href="terms.pdf">Terms of Service</a></p>
         <p>Phone: +91 80755 62549 | Email: <a href="mailto:sensedesign.info@gmail.com">sensedesign.info@gmail.com</a></p>
     </footer>
-    </body>
+
+</body>
 </html>

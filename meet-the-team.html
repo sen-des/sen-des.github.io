@@ -17,16 +17,25 @@
         .header {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-between; /* Space between logo and nav */
             padding: 20px 40px;
-            background-color: #4CAF50;
+            background-color: #4CAF50; /* Match footer color */
             color: white;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
-        .logo img {
-            max-width: 200px;
-            height: auto;
+        .company-info {
+            text-align: left; /* Align text to the left */
+        }
+
+        .company-info h1 {
+            margin: 0;
+            font-size: 36px; /* Larger font for company name */
+        }
+
+        .company-info p {
+            margin: 0;
+            font-size: 18px; /* Smaller font for tagline */
         }
 
         .nav-menu {
@@ -87,7 +96,7 @@
 
         /* Footer */
         footer {
-            background-color: #4CAF50;
+            background-color: #4CAF50; /* Same color as header */
             color: white;
             padding: 20px 40px;
             text-align: center;
@@ -110,8 +119,9 @@
 <body>
 
     <header class="header">
-        <div class="logo">
-            <img src="logo.png" alt="Company Logo">
+        <div class="company-info">
+            <h1>Sense Design</h1>
+            <p>Your partner in precision engineering solutions</p>
         </div>
         <nav>
             <ul class="nav-menu">
